@@ -1,12 +1,14 @@
 The concept of endianness is about the way of storing or transmitting the bytes of a multi-byte data type.In big-endian, the most-significant byte is stored first, while in little-endian we store the least-significant one first. For instance, let’s see how a hexadecimal value 0xFF342109 will be stored at memory locations 0x1000 through 0x1003 in a big-endian and a little-endian system:
 
 Big endian: 
-0xFF   0x34   0x21   0x09 
-0x1000 0x1001 0x1002 0x1003
+| Address | 0x1000 | 0x1001 | 0x1002 | 0x1003 |
+|---------|--------|--------|--------|--------|
+| Value   | 0xFF   | 0x34   | 0x21   | 0x09   |
 
 Little endian:
-0x09	0x21	0x34	0xFF
-0x1000	0x1001	0x1002	0x1003
+| Address | 0x1000 | 0x1001 | 0x1002 | 0x1003 |
+|---------|--------|--------|--------|--------|
+| Value   | 0x09   | 0x21   | 0x34   | 0xFF   |
 
 There are use cases for both. Big-endian byte ordering is preferred while sending data over the network. For instance, there is RFC 793 standard,
 which requires all the fields in the network headers to be big endian. Little-endian is used in processor architectures, for instance Intel x86.
