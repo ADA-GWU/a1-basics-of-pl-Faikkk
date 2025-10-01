@@ -26,7 +26,7 @@ to sys.getsizeof(), where the garbage collector's overhead is also counted.
 In the code above, we have a tuple (tpl) and a list (lst).
 When executing the code, we get the following:
 
-48
+48 <br>
 72
 
 It can be seen that the tuple occupies less memory than a list.
